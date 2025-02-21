@@ -131,7 +131,8 @@ join orders o on o.customer_id = c.customer_id group by o.customer_id;
                        
                        
 -- 6.2
-select ep.employee_id,ep.employee_name,sum(od.total_amount) as tongdoanhthu  from orders od join Employees ep on od.employee_id=ep.employee_id group by  ep.employee_id;
+select e.employee_id,e.employee_name,sum(od.total_amount) as total_revenue  
+from orders od join Employees e on od.employee_id=e.employee_id group by  e.employee_id;
 
 
 -- 6.3
